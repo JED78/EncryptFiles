@@ -91,18 +91,15 @@ namespace EncryptFiles.LogicaNegocio
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
+           
+           return true;
 
-
-            //if (string.IsNullOrWhiteSpace(password)) return false;
-            //if (password.Length < 8) return false;
-            //if (!password.Any(char.IsUpper)) return false;
-            //if (!password.Any(char.IsLower)) return false;
-            //if (!password.Any(char.IsDigit)) return false;
-            //if (!password.Any(ch => "!@#$%^&*()_+-=[]{}|;:'\",.<>?/".Contains(ch))) return false;
+            //if (string.IsNullOrWhiteSpace(contrasena)) return false;
+            //if (contrasena.Length < 8) return false;
+            //if (!contrasena.Any(char.IsUpper)) return false;
+            //if (!contrasena.Any(char.IsLower)) return false;
+            //if (!contrasena.Any(char.IsDigit)) return false;
+            //if (!contrasena.Any(ch => "!@#$%^&*()_+-=[]{}|;:'\",.<>?/".Contains(ch))) return false;
 
         }
     }

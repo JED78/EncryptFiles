@@ -11,7 +11,10 @@ namespace EncryptFiles.LogicaNegocio
 {
     public class DesencriptarFichero
     {
-
+        /// <summary>
+        /// Funcion que desencripta un fichero.
+        /// </summary>
+        /// <param name="fichero">Datos del fichero que se desea desencriptar</param>
         public void Desencriptar(Fichero fichero)
         {
             using (var fsIn = new FileStream(fichero.RutaOrigen, FileMode.Open))
