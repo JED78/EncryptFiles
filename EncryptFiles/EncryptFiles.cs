@@ -15,12 +15,22 @@ namespace EncryptFiles
 {
     public partial class EncryptFiles : Form
     {
+        #region Constructor
         public EncryptFiles()
         {
             InitializeComponent();
         }
+        #endregion
+
+        #region Funciones Privadas
 
         #region Eventos
+
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de desencriptar fichero.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void desencriptarFicheroButton_Click(object sender, EventArgs e)
         {
             try
@@ -45,6 +55,11 @@ namespace EncryptFiles
             }
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de encriptar fichero.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void encriptarFicheroButton_Click(object sender, EventArgs e)
         {
             try
@@ -70,27 +85,45 @@ namespace EncryptFiles
             }
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de seleccionar fichero para encriptar.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void seleccionarArchivoEncriptarButton_Click(object sender, EventArgs e)
         {
             seleccionarFicheroEncriptarTextBox.Text = SeleccionarFichero();
         }
-
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de seleccionar directorio destino para encriptar fichero.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void seleccionarDirectorioDestinoButton_Click(object sender, EventArgs e)
         {
             seleccionarDestinoFicheroEncriptarTextBox.Text = SeleccionarRutaDestino();
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de seleccionar fichero para desencriptar.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void SeleccionarFicheroDesencriptarButton_Click(object sender, EventArgs e)
         {
             seleccionarFicheroDesencriptarTextBox.Text = SeleccionarFichero();
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al pulsar el botón de seleccionar directorio destino para desencriptar fichero.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
         private void seleccionarDestinoDesencriptarButton_Click(object sender, EventArgs e)
         {
             seleccionarFicheroDesencriptarDestinoTextBox.Text = SeleccionarRutaDestino();
         }
         #endregion 
-
 
         #region Funciones Privadas
 
@@ -152,6 +185,11 @@ namespace EncryptFiles
             return validaciones.DescripcionErroresValidaciones(seleccionarFicheroDesencriptarTextBox.Text, seleccionarFicheroDesencriptarDestinoTextBox.Text, contrasenaDesencriptarTextBox.Text);
         }
 
+        /// <summary>
+        /// Obtener el nombre del fichero a partir de la ruta destino.
+        /// </summary>
+        /// <param name="rutaDestino">Ruta destino fichero encriptado/desencriptado</param>
+        /// <returns>Devuelve el nombre del fichero</returns>
         private string ObtenerNombreDelFichero(string rutaDestino)
         {
             return Path.GetFileName(rutaDestino);
@@ -181,6 +219,7 @@ namespace EncryptFiles
 
         #endregion
 
-      
+        #endregion
+
     }
 }
