@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -221,5 +222,20 @@ namespace EncryptFiles
 
         #endregion
 
+        private void generarContrseñaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GenerarContrasena generarContrasena = new GenerarContrasena();
+                contrasenaEncriptarTextBox.Text = generarContrasena.GenerarContrasenaSegura(10);
+                contrasenaDesencriptarTextBox.Text = contrasenaEncriptarTextBox.Text;
+                
+            }
+            catch (Exception ex)
+            {
+
+               MessageBox.Show("Error al generar contraseña: " + ex.Message, "Error al generar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

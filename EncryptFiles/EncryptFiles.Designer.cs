@@ -30,7 +30,6 @@
         {
             this.DesencriptarTabControl = new System.Windows.Forms.TabControl();
             this.encriptarTabPage = new System.Windows.Forms.TabPage();
-            this.desencriptarTabPage = new System.Windows.Forms.TabPage();
             this.encriptarFicherosGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.contasenaLabel = new System.Windows.Forms.Label();
@@ -41,6 +40,9 @@
             this.seleccionarFicheroEncriptarTextBox = new System.Windows.Forms.TextBox();
             this.seleccionarDirectorioDestinoButton = new System.Windows.Forms.Button();
             this.seleccionarArchivoEncriptarButton = new System.Windows.Forms.Button();
+            this.encriptarFicheroButton = new System.Windows.Forms.Button();
+            this.generarContrseñaButton = new System.Windows.Forms.Button();
+            this.desencriptarTabPage = new System.Windows.Forms.TabPage();
             this.desencriptarFicheroGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,12 +54,11 @@
             this.seleccionarDestinoDesencriptarButton = new System.Windows.Forms.Button();
             this.SeleccionarFicheroDesencriptarButton = new System.Windows.Forms.Button();
             this.desencriptarFicheroButton = new System.Windows.Forms.Button();
-            this.encriptarFicheroButton = new System.Windows.Forms.Button();
             this.DesencriptarTabControl.SuspendLayout();
             this.encriptarTabPage.SuspendLayout();
-            this.desencriptarTabPage.SuspendLayout();
             this.encriptarFicherosGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.desencriptarTabPage.SuspendLayout();
             this.desencriptarFicheroGroupBox.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -84,17 +85,6 @@
             this.encriptarTabPage.Text = "Encriptar Archivo";
             this.encriptarTabPage.UseVisualStyleBackColor = true;
             // 
-            // desencriptarTabPage
-            // 
-            this.desencriptarTabPage.Controls.Add(this.desencriptarFicheroGroupBox);
-            this.desencriptarTabPage.Location = new System.Drawing.Point(4, 25);
-            this.desencriptarTabPage.Name = "desencriptarTabPage";
-            this.desencriptarTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.desencriptarTabPage.Size = new System.Drawing.Size(792, 198);
-            this.desencriptarTabPage.TabIndex = 1;
-            this.desencriptarTabPage.Text = "Desencriptar Archivo";
-            this.desencriptarTabPage.UseVisualStyleBackColor = true;
-            // 
             // encriptarFicherosGroupBox
             // 
             this.encriptarFicherosGroupBox.Controls.Add(this.tableLayoutPanel2);
@@ -112,7 +102,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.72473F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.27527F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel2.Controls.Add(this.contasenaLabel, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.ficheroEncriptarLabel, 0, 1);
@@ -122,6 +112,7 @@
             this.tableLayoutPanel2.Controls.Add(this.seleccionarDirectorioDestinoButton, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.seleccionarArchivoEncriptarButton, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.encriptarFicheroButton, 2, 8);
+            this.tableLayoutPanel2.Controls.Add(this.generarContrseñaButton, 2, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -167,30 +158,30 @@
             // 
             // contrasenaEncriptarTextBox
             // 
-            this.contrasenaEncriptarTextBox.Location = new System.Drawing.Point(248, 64);
+            this.contrasenaEncriptarTextBox.Location = new System.Drawing.Point(247, 64);
             this.contrasenaEncriptarTextBox.Name = "contrasenaEncriptarTextBox";
-            this.contrasenaEncriptarTextBox.Size = new System.Drawing.Size(382, 22);
+            this.contrasenaEncriptarTextBox.Size = new System.Drawing.Size(381, 22);
             this.contrasenaEncriptarTextBox.TabIndex = 7;
             this.contrasenaEncriptarTextBox.Text = "Prueba";
             // 
             // seleccionarDestinoFicheroEncriptarTextBox
             // 
-            this.seleccionarDestinoFicheroEncriptarTextBox.Location = new System.Drawing.Point(248, 36);
+            this.seleccionarDestinoFicheroEncriptarTextBox.Location = new System.Drawing.Point(247, 36);
             this.seleccionarDestinoFicheroEncriptarTextBox.Name = "seleccionarDestinoFicheroEncriptarTextBox";
-            this.seleccionarDestinoFicheroEncriptarTextBox.Size = new System.Drawing.Size(382, 22);
+            this.seleccionarDestinoFicheroEncriptarTextBox.Size = new System.Drawing.Size(381, 22);
             this.seleccionarDestinoFicheroEncriptarTextBox.TabIndex = 4;
             this.seleccionarDestinoFicheroEncriptarTextBox.Text = "C:\\\\Temp\\\\";
             // 
             // seleccionarFicheroEncriptarTextBox
             // 
-            this.seleccionarFicheroEncriptarTextBox.Location = new System.Drawing.Point(248, 3);
+            this.seleccionarFicheroEncriptarTextBox.Location = new System.Drawing.Point(247, 3);
             this.seleccionarFicheroEncriptarTextBox.Name = "seleccionarFicheroEncriptarTextBox";
-            this.seleccionarFicheroEncriptarTextBox.Size = new System.Drawing.Size(382, 22);
+            this.seleccionarFicheroEncriptarTextBox.Size = new System.Drawing.Size(381, 22);
             this.seleccionarFicheroEncriptarTextBox.TabIndex = 1;
             // 
             // seleccionarDirectorioDestinoButton
             // 
-            this.seleccionarDirectorioDestinoButton.Location = new System.Drawing.Point(636, 36);
+            this.seleccionarDirectorioDestinoButton.Location = new System.Drawing.Point(634, 36);
             this.seleccionarDirectorioDestinoButton.Name = "seleccionarDirectorioDestinoButton";
             this.seleccionarDirectorioDestinoButton.Size = new System.Drawing.Size(139, 22);
             this.seleccionarDirectorioDestinoButton.TabIndex = 5;
@@ -200,13 +191,44 @@
             // 
             // seleccionarArchivoEncriptarButton
             // 
-            this.seleccionarArchivoEncriptarButton.Location = new System.Drawing.Point(636, 3);
+            this.seleccionarArchivoEncriptarButton.Location = new System.Drawing.Point(634, 3);
             this.seleccionarArchivoEncriptarButton.Name = "seleccionarArchivoEncriptarButton";
             this.seleccionarArchivoEncriptarButton.Size = new System.Drawing.Size(139, 27);
             this.seleccionarArchivoEncriptarButton.TabIndex = 2;
             this.seleccionarArchivoEncriptarButton.Text = "Seleccionar Fichero ";
             this.seleccionarArchivoEncriptarButton.UseVisualStyleBackColor = true;
             this.seleccionarArchivoEncriptarButton.Click += new System.EventHandler(this.seleccionarArchivoEncriptarButton_Click);
+            // 
+            // encriptarFicheroButton
+            // 
+            this.encriptarFicheroButton.Location = new System.Drawing.Point(634, 138);
+            this.encriptarFicheroButton.Name = "encriptarFicheroButton";
+            this.encriptarFicheroButton.Size = new System.Drawing.Size(141, 30);
+            this.encriptarFicheroButton.TabIndex = 8;
+            this.encriptarFicheroButton.Text = "Encriptar Fichero";
+            this.encriptarFicheroButton.UseVisualStyleBackColor = true;
+            this.encriptarFicheroButton.Click += new System.EventHandler(this.encriptarFicheroButton_Click);
+            // 
+            // generarContrseñaButton
+            // 
+            this.generarContrseñaButton.Location = new System.Drawing.Point(634, 64);
+            this.generarContrseñaButton.Name = "generarContrseñaButton";
+            this.generarContrseñaButton.Size = new System.Drawing.Size(139, 22);
+            this.generarContrseñaButton.TabIndex = 9;
+            this.generarContrseñaButton.Text = "Generar Contraseña\r\n";
+            this.generarContrseñaButton.UseVisualStyleBackColor = true;
+            this.generarContrseñaButton.Click += new System.EventHandler(this.generarContrseñaButton_Click);
+            // 
+            // desencriptarTabPage
+            // 
+            this.desencriptarTabPage.Controls.Add(this.desencriptarFicheroGroupBox);
+            this.desencriptarTabPage.Location = new System.Drawing.Point(4, 25);
+            this.desencriptarTabPage.Name = "desencriptarTabPage";
+            this.desencriptarTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.desencriptarTabPage.Size = new System.Drawing.Size(792, 198);
+            this.desencriptarTabPage.TabIndex = 1;
+            this.desencriptarTabPage.Text = "Desencriptar Archivo";
+            this.desencriptarTabPage.UseVisualStyleBackColor = true;
             // 
             // desencriptarFicheroGroupBox
             // 
@@ -224,7 +246,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.41368F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.58632F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.seleccionarDestinoDesencriptarLabel, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.selecconarFicheroDesencriptarLabel, 0, 1);
@@ -280,30 +302,30 @@
             // 
             // contrasenaDesencriptarTextBox
             // 
-            this.contrasenaDesencriptarTextBox.Location = new System.Drawing.Point(246, 64);
+            this.contrasenaDesencriptarTextBox.Location = new System.Drawing.Point(245, 64);
             this.contrasenaDesencriptarTextBox.Name = "contrasenaDesencriptarTextBox";
-            this.contrasenaDesencriptarTextBox.Size = new System.Drawing.Size(384, 22);
+            this.contrasenaDesencriptarTextBox.Size = new System.Drawing.Size(383, 22);
             this.contrasenaDesencriptarTextBox.TabIndex = 7;
             this.contrasenaDesencriptarTextBox.Text = "Prueba";
             // 
             // seleccionarFicheroDesencriptarDestinoTextBox
             // 
-            this.seleccionarFicheroDesencriptarDestinoTextBox.Location = new System.Drawing.Point(246, 36);
+            this.seleccionarFicheroDesencriptarDestinoTextBox.Location = new System.Drawing.Point(245, 36);
             this.seleccionarFicheroDesencriptarDestinoTextBox.Name = "seleccionarFicheroDesencriptarDestinoTextBox";
-            this.seleccionarFicheroDesencriptarDestinoTextBox.Size = new System.Drawing.Size(384, 22);
+            this.seleccionarFicheroDesencriptarDestinoTextBox.Size = new System.Drawing.Size(383, 22);
             this.seleccionarFicheroDesencriptarDestinoTextBox.TabIndex = 4;
             this.seleccionarFicheroDesencriptarDestinoTextBox.Text = "C:\\\\Temp\\\\";
             // 
             // seleccionarFicheroDesencriptarTextBox
             // 
-            this.seleccionarFicheroDesencriptarTextBox.Location = new System.Drawing.Point(246, 3);
+            this.seleccionarFicheroDesencriptarTextBox.Location = new System.Drawing.Point(245, 3);
             this.seleccionarFicheroDesencriptarTextBox.Name = "seleccionarFicheroDesencriptarTextBox";
-            this.seleccionarFicheroDesencriptarTextBox.Size = new System.Drawing.Size(384, 22);
+            this.seleccionarFicheroDesencriptarTextBox.Size = new System.Drawing.Size(383, 22);
             this.seleccionarFicheroDesencriptarTextBox.TabIndex = 1;
             // 
             // seleccionarDestinoDesencriptarButton
             // 
-            this.seleccionarDestinoDesencriptarButton.Location = new System.Drawing.Point(636, 36);
+            this.seleccionarDestinoDesencriptarButton.Location = new System.Drawing.Point(634, 36);
             this.seleccionarDestinoDesencriptarButton.Name = "seleccionarDestinoDesencriptarButton";
             this.seleccionarDestinoDesencriptarButton.Size = new System.Drawing.Size(139, 22);
             this.seleccionarDestinoDesencriptarButton.TabIndex = 5;
@@ -313,7 +335,7 @@
             // 
             // SeleccionarFicheroDesencriptarButton
             // 
-            this.SeleccionarFicheroDesencriptarButton.Location = new System.Drawing.Point(636, 3);
+            this.SeleccionarFicheroDesencriptarButton.Location = new System.Drawing.Point(634, 3);
             this.SeleccionarFicheroDesencriptarButton.Name = "SeleccionarFicheroDesencriptarButton";
             this.SeleccionarFicheroDesencriptarButton.Size = new System.Drawing.Size(139, 27);
             this.SeleccionarFicheroDesencriptarButton.TabIndex = 2;
@@ -323,23 +345,13 @@
             // 
             // desencriptarFicheroButton
             // 
-            this.desencriptarFicheroButton.Location = new System.Drawing.Point(636, 142);
+            this.desencriptarFicheroButton.Location = new System.Drawing.Point(634, 142);
             this.desencriptarFicheroButton.Name = "desencriptarFicheroButton";
             this.desencriptarFicheroButton.Size = new System.Drawing.Size(141, 26);
             this.desencriptarFicheroButton.TabIndex = 8;
             this.desencriptarFicheroButton.Text = "Desencriptar Fichero";
             this.desencriptarFicheroButton.UseVisualStyleBackColor = true;
             this.desencriptarFicheroButton.Click += new System.EventHandler(this.desencriptarFicheroButton_Click);
-            // 
-            // encriptarFicheroButton
-            // 
-            this.encriptarFicheroButton.Location = new System.Drawing.Point(636, 138);
-            this.encriptarFicheroButton.Name = "encriptarFicheroButton";
-            this.encriptarFicheroButton.Size = new System.Drawing.Size(141, 30);
-            this.encriptarFicheroButton.TabIndex = 8;
-            this.encriptarFicheroButton.Text = "Encriptar Fichero";
-            this.encriptarFicheroButton.UseVisualStyleBackColor = true;
-            this.encriptarFicheroButton.Click += new System.EventHandler(this.encriptarFicheroButton_Click);
             // 
             // EncryptFiles
             // 
@@ -352,10 +364,10 @@
             this.Text = "Encrypt Files";
             this.DesencriptarTabControl.ResumeLayout(false);
             this.encriptarTabPage.ResumeLayout(false);
-            this.desencriptarTabPage.ResumeLayout(false);
             this.encriptarFicherosGroupBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.desencriptarTabPage.ResumeLayout(false);
             this.desencriptarFicheroGroupBox.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -390,5 +402,6 @@
         private System.Windows.Forms.Button SeleccionarFicheroDesencriptarButton;
         private System.Windows.Forms.Button desencriptarFicheroButton;
         private System.Windows.Forms.Button encriptarFicheroButton;
+        private System.Windows.Forms.Button generarContrseñaButton;
     }
 }

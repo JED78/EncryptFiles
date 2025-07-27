@@ -58,6 +58,7 @@
     <Compile Include="Entidades\Fichero.cs" />
     <Compile Include="LogicaNegocio\DesencriptarFichero.cs" />
     <Compile Include="LogicaNegocio\EncriptarFichero.cs" />
+    <Compile Include="LogicaNegocio\GenerarContrasena.cs" />
     <Compile Include="LogicaNegocio\Validaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,8 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Iconos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
