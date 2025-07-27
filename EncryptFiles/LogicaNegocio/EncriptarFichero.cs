@@ -11,6 +11,7 @@ namespace EncryptFiles.LogicaNegocio
 {
     public class EncriptarFichero
     {
+        #region Funciones Públicas
         /// <summary>
         /// Función que encripta el fichero seleccionado
         /// </summary>
@@ -40,6 +41,9 @@ namespace EncryptFiles.LogicaNegocio
             }
         }
 
+        #endregion
+
+        #region Funciones Privadas
         /// <summary>
         /// Función que genera Byter aleatorios 
         /// </summary>
@@ -55,6 +59,6 @@ namespace EncryptFiles.LogicaNegocio
             return bytes;
         }
 
-        
+        #endregion
     }
 }

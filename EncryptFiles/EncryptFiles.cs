@@ -28,6 +28,27 @@ namespace EncryptFiles
         #region Eventos
 
         /// <summary>
+        /// Funcion que se ejecuta al pulsar el botón de generar contraseña.
+        /// </summary>
+        /// <param name="sender">object</param>
+        /// <param name="e">EventArgs</param>
+        private void generarContrseñaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GenerarContrasena generarContrasena = new GenerarContrasena();
+                contrasenaEncriptarTextBox.Text = generarContrasena.GenerarContrasenaSegura(10);
+                contrasenaDesencriptarTextBox.Text = contrasenaEncriptarTextBox.Text;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al generar contraseña: " + ex.Message, "Error al generar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Evento que se ejecuta al pulsar el botón de desencriptar fichero.
         /// </summary>
         /// <param name="sender">object</param>
@@ -222,20 +243,6 @@ namespace EncryptFiles
 
         #endregion
 
-        private void generarContrseñaButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                GenerarContrasena generarContrasena = new GenerarContrasena();
-                contrasenaEncriptarTextBox.Text = generarContrasena.GenerarContrasenaSegura(10);
-                contrasenaDesencriptarTextBox.Text = contrasenaEncriptarTextBox.Text;
-                
-            }
-            catch (Exception ex)
-            {
-
-               MessageBox.Show("Error al generar contraseña: " + ex.Message, "Error al generar contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+      
     }
 }

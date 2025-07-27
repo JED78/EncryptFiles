@@ -9,6 +9,7 @@ namespace EncryptFiles.LogicaNegocio
 {
     public class Validaciones
     {
+        #region Funiones Públicas
         /// <summary>
         /// Funcion que nos devuelve el error en la validacion
         /// de los datos del formulario. 
@@ -46,7 +47,9 @@ namespace EncryptFiles.LogicaNegocio
             return string.Empty;
 
         }
+        #endregion
 
+        #region Funciones Privadas
         /// <summary>
         /// Función que valida ruta origen si existe el fichero
         /// </summary>
@@ -102,5 +105,7 @@ namespace EncryptFiles.LogicaNegocio
             //if (!contrasena.Any(ch => "!@#$%^&*()_+-=[]{}|;:'\",.<>?/".Contains(ch))) return false;
 
         }
+
+        #endregion
     }
 }

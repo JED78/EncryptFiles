@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace EncryptFiles.LogicaNegocio
 {
+    #region Funciones Públicas
     public class DesencriptarFichero
     {
         /// <summary>
@@ -41,4 +42,6 @@ namespace EncryptFiles.LogicaNegocio
         }
 
     }
+
+    #endregion
 }
